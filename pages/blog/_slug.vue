@@ -2,7 +2,7 @@
   <div>
   <GlobalNav />
   <article>
-    <h2 class="text-4xl">{{ post.title }}</h2>
+    <h2>{{ post.title }}</h2>
     <p>{{ post.description }}</p>
     <nuxt-content :document="post" />
   </article>

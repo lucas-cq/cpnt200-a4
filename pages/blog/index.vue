@@ -1,7 +1,7 @@
 <template>
   <div class="gallery-box">
     <main>
-      <h2>Card Loop</h2>
+      <h2 class="text-4xl mt-5">Card Loop</h2>
       <Card v-for="topic in topics" :key="topic.id" :info="topic" />
     </main>
   </div>
