@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: 'color-picker'
+    label: 'Color Picker'
+    folder: 'content/color'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Color', name: 'color', widget: 'color', allowInput: true, multiple: true}
+  - name: 'gallery'
+    label: 'Car Gallery'
+    folder: 'content/gallery'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image', multiple: true }
+      - { label: 'Image Date', name: 'date', widget: 'datetime' }
+  - name: 'map'
+    label: 'Map'
+    folder: 'content/maps'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Location', name: 'location', widget: 'map' }
+      - { label: 'About This Place', name: 'about-this-place', widget: 'string' }
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
