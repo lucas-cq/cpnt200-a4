@@ -2,31 +2,29 @@
   <header>
   <nav>
       <ul>
-        <li><NuxtLink class="nav-link" to="/">Home</NuxtLink></li>
+        <li><NuxtLink class="nav-link" to="#">Home</NuxtLink></li>
         <li><NuxtLink class="nav-link" to="#">Articles</NuxtLink></li>
-        <li><NuxtLink class="nav-link" to="/gallery/">Gallery</NuxtLink></li>
+        <li><NuxtLink class="nav-link" to="/">Gallery</NuxtLink></li>
         <li><NuxtLink class="nav-link" to="#">Contact</NuxtLink></li>
     </ul>
   </nav>
   </header>
 </template>
 
-<style scoped>
+<style>
 nav {
-  display: flex;
-  justify-content: space-around;
+  @apply flex justify-around
 }
 nav ul {
-  display: flex;
-  justify-content: space-between;
+  @apply flex justify-around
 }
 nav li {
-  margin: 20px 50px 20px 50px;
-  font-size: 20px;
-  list-style: none;
+  @apply text-2xl list-none my-6 mx-8
 }
 .nav-link {
-  text-decoration: none;
-  color: white;
+  @apply text-white no-underline
+}
+header {
+  @apply bg-red-400
 }
 </style>
