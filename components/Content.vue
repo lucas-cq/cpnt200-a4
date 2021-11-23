@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Template Company</h1>
+    <h1 class="text-4xl m-11">Template Company</h1>
     <div class="img-box">
       <nuxt-img
         src="assets/images/man-on-bike.jpg"
